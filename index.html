@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
+    <title>Habit-master</title>
+  </head>
+  <body>
+    <!-- Navigation Slider -->
+    <header class="mobile">
+      <section
+        id="mySidenav"
+        class="sidenav"
+        style="display: flex; flex-direction: column; float: left"
+      >
+        <a
+          id="firstElement"
+          style="font-size: 40px"
+          href="#"
+          onclick="closeNav()"
+          >&times</a
+        >
+        <h1 id="secondElement" style="text-align: center; color: white">
+          Menu
+        </h1>
+        <button
+          id="thirdElement"
+          type="button"
+          onclick="clearStorage()"
+          style="margin: 0 auto"
+        >
+          <i class="fas fa-database"></i> Clear Storage
+        </button>
+        <section
+          class="social-icons"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            align-items: center;
+            width: auto;
+          "
+        >
+          <h1 style="color: white; padding: 10px; font-size: 20px">
+            Follow me on:
+          </h1>
+          <a
+            id="firstElement"
+            style="font-size: 17px"
+            href="https://m.facebook.com/babis.hamburg"
+            target="_blank"
+            ><i class="fab fa-facebook"> Facebook</i></a
+          >
+          <a
+            id="secondElement"
+            style="font-size: 17px"
+            href="https://www.instagram.com/coding_harry/"
+            target="_blank"
+            ><i class="fab fa-instagram"> Instagram</i></a
+          >
+          <a
+            id="thirdElement"
+            style="font-size: 17px"
+            href="https://twitter.com/harry_kng?lang=en"
+            target="_blank"
+            ><i class="fab fa-twitter"> Twitter</i></a
+          >
+        </section>
+      </section>
+      <button id="navModal" onclick="openNav()">
+        <i class="fas fa-cog"></i>
+      </button>
+      <button type="button" onclick="printPage()" style="margin: 0 auto">
+        <i class="fas fa-print"></i> Print Page
+      </button>
+    </header>
+
+    <section class="container">
+      <section class="grid">
+        <h1 style="text-align: center">
+          <i class="fas fa-heartbeat" style="font-size: 30px"></i> Health
+        </h1>
+        <button class="buttonWC" onclick="loader()""><i class="fas fa-restroom"></i> WC</button>
+        <button class="buttonEx" onclick="loader()"><i class="fas fa-skull"></i> (X)</button>
+        <button class="buttonShower" onclick="loader()">
+          <i class="fas fa-shower"></i> Shower
+        </button>
+        <button class="button1LWater" onclick="loader()">
+          <i class="fas fa-wine-bottle"></i> 1L Water
+        </button>
+      </section>
+      <section class="grid">
+        <h1 style="text-align: center">
+          <i class="fas fa-air-freshener" style="font-size: 30px"></i> Beauty
+        </h1>
+        <button class="buttonFeet" onclick="loader()">
+          <i class="fas fa-socks"></i> Cleaned Feet
+        </button>
+        <button class="buttonLenses" onclick="loader()">
+          <i class="fas fa-glasses"></i> Lenses
+        </button>
+        <button class="buttonHaircut" onclick="loader()">
+          <i class="fas fa-cut"></i> Haircut
+        </button>
+        <button class="buttonShaved" onclick="loader()"><i class="fas fa-fan"></i> Shave</button>
+      </section>
+      <section class="grid">
+        <h1 style="text-align: center">
+          <i class="fas fa-running" style="font-size: 30px"></i> Sport
+        </h1>
+        <button class="buttonHealthyFood" onclick="loader()">
+          <i class="fas fa-utensils"></i> Eat healthy
+        </button>
+        <button class="buttonExercise" onclick="loader()">
+          <i class="fas fa-dumbbell"></i> Exercised
+        </button>
+        <button class="buttonPosture" onclick="loader()">
+          <i class="fas fa-child"></i> Maintained Posture
+        </button>
+        <button class="buttonAlcohol" onclick="loader()">
+          <i class="fas fa-wine-bottle"></i> Avoided Alcohol
+        </button>
+      </section>
+    </section>
+    <!--Storage and Live Habits Display-->
+    <div class="results-container">
+      <div id="results-tracked"></div>
+      <div id="actual-habits">
+        <div id="health-tracking">
+          <h1>
+            <i class="fas fa-heartbeat" style="font-size: 30px"></i> Health
+          </h1>
+        </div>
+        <div id="beauty-tracking">
+          <h1>
+            <i class="fas fa-air-freshener" style="font-size: 30px"></i> Beauty
+          </h1>
+        </div>
+        <div id="sport-tracking">
+          <h1><i class="fas fa-running" style="font-size: 30px"></i> Sport</h1>
+        </div>
+      </div>
+    </div>
+
+    <article id="page-loader">
+      <img
+        src="https://www.uttf.com.ua/assets/images/loader2.gif"
+        alt="loader"
+      />
+    </article>
+    <footer>Developed by Himanshu-AT | All Rights Reserved &#174;</footer>
+    <script>
+      // Navigation
+      let mySidenav = document.getElementById("mySidenav");
+      let firstElement = document.getElementById("firstElement");
+      let secondElement = document.getElementById("secondElement");
+      let thirdElement = document.getElementById("thirdElement");
+      let social = document.querySelector(".social-icons");
+
+      function openNav() {
+        mySidenav.style.width = "250px";
+        firstElement.style.animation = "fadeIn 0.8s forwards";
+        secondElement.style.animation = "fadeIn 1.2s forwards";
+        thirdElement.style.animation = "fadeIn 1.6s forwards";
+        social.style.animation = "fadeIn 2s forwards";
+      }
+
+      function closeNav() {
+        mySidenav.style.width = "0px";
+        firstElement.style.animation = "fadeOut 0.2s forwards";
+        secondElement.style.animation = "fadeOut 0.2s forwards";
+        thirdElement.style.animation = "fadeOut 0.2s forwards";
+        social.style.animation = "fadeOut 0.2s forwards";
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>
