@@ -1,19 +1,27 @@
-# Habitify ✏️
+# Habit Tracker
+This is a simple web-based habit tracker that allows you to keep track of your daily habits. It is built using HTML, CSS, and JavaScript.
 
-For my revision after finishing the second year of my degree, I decided to work with a quick idea that came to my mind before thinking the project. Habitify is a 
-habit tracking page that helps the user have knowledge on what they did during the day, month or even year with the help of localStorage and even printed pages 
-(including PDF). 
+# Features
+- Add existing habits with time to track
 
-## Use 👨🏻‍💻
 
-Users can easily choose between different buttons regarding three different types of activities (Health, Beauty and Sport) and log their habit times. They can also
-open the slider navigation and delete the saved habits from different timeframes or even print the whole page of the day if they wish.
+## Usage
+To use the habit tracker, simply open the index.html file in your web browser.
 
-## Social Media
+## Technical Details
+The habit tracker is built using HTML for the structure and CSS for the styling. It uses JavaScript to handle the dynamic updating of the habit calendar and to save the habit data to local storage. 
 
-You can follow me on some social media platforms shown below:
+## Improvements
+Some possible improvements that could be made to the habit tracker include:
 
-<a href = "https://twitter.com/Harry_Kng">Twitter</a> </br>
-<a href = "https://www.facebook.com/babis.hamburg">Facebook</a> </br>
-<a href = "https://www.instagram.com/coding_harry/">Instagram</a> </br>
-<a href = "http://www.github.com/HarryKing87">GitHub</a> </br>
+- Adding the ability to set reminders or notifications for habits
+- Allowing users to track habits on a weekly or monthly basis
+- Creating a backend server to store habit data and allow for syncing between devices
+- Adding data visualization tools to help users track their progress and see trends over time
+- Mark habits as completed or skipped for each day
+- View a calendar view of habits and their completion status
+- Edit or delete existing habits
+
+
+## License
+This habit tracker is released under the MIT License. See the LICENSE file for more information.
