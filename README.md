@@ -6,10 +6,10 @@ This is a simple web-based habit tracker that allows you to keep track of your d
 
 
 ## Usage
-To use the habit tracker, simply open the index.html file in your web browser. You can then add new habits using the input fields on the page. To mark a habit as completed or skipped for a given day, click on the corresponding cell in the calendar view. To edit or delete an existing habit, click on the "Edit" or "Delete" button next to the habit in the list.
+To use the habit tracker, simply open the index.html file in your web browser. You can then click on any habit and it'll be added in the list.
 
 ## Technical Details
-The habit tracker is built using HTML for the structure and CSS for the styling. It uses JavaScript to handle the dynamic updating of the habit calendar and to save the habit data to local storage. The calendar view is generated using the Moment.js library.
+The habit tracker is built using HTML for the structure and CSS for the styling. It uses JavaScript to handle the dynamic updating of the habit calendar and to save the habit data to local storage.
 
 ## Improvements
 Some possible improvements that could be made to the habit tracker include:
