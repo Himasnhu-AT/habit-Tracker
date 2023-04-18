@@ -14,14 +14,14 @@ The habit tracker is built using HTML for the structure and CSS for the styling.
 ## Improvements
 Some possible improvements that could be made to the habit tracker include:
 
-Adding the ability to set reminders or notifications for habits
-Allowing users to track habits on a weekly or monthly basis
-Creating a backend server to store habit data and allow for syncing between devices
-Adding data visualization tools to help users track their progress and see trends over time
-Mark habits as completed or skipped for each day
-View a calendar view of habits and their completion status
-Edit or delete existing habits
+- Adding the ability to set reminders or notifications for habits
+- Allowing users to track habits on a weekly or monthly basis
+- Creating a backend server to store habit data and allow for syncing between devices
+- Adding data visualization tools to help users track their progress and see trends over time
+- Mark habits as completed or skipped for each day
+- View a calendar view of habits and their completion status
+- Edit or delete existing habits
 
 
-License
+## License
 This habit tracker is released under the MIT License. See the LICENSE file for more information.
